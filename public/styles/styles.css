@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+@import url('http://fonts.cdnfonts.com/css/led-digital-7');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 :root{
-    --font-color: #000000;
-    --bg-gradient: #0003d1;
-    --body-color: #0106ffcb;
-    --box-shadow: #0300bd;
+    --font-color: #f2ae87;
+    --bg-gradient: #0e6da5;
+    --body-color: #094e75;
+    --box-shadow: #073855;
+    --lcd-color: #8b9599;
 }
 
 .dark-theme{
     --font-color: #dfdfdf;
-    --bg-gradient: #333333;
+    --bg-gradient: #353535;
     --body-color: #252525;
     --box-shadow: #151515;
+    --lcd-color: #91ca8f; 
+
 }
 
 *{
@@ -35,6 +40,8 @@ body{
 .calculator__mode{
     color: var(--font-color);
     cursor: pointer;
+    position: absolute;
+    margin: 25px;
 }
 .calculator__title{
     position: absolute;
@@ -45,19 +52,45 @@ body{
 }
 
 .calculator__v2{
-    height: 450px;
+    height: 460px;
     width: 375px;
     border-radius: 10px;
     box-shadow: 5px 10px 15px var(--box-shadow);
     padding: 25px;
-    backdrop-filter: blur( 4px );
+    backdrop-filter: blur( 40px );
 
 }
 .calculator__screen{
     width: 100%;
-    height: 35%;
-    padding: 0px 20px;
+    height: 30%;
 }
+
+.calculator__brand{
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator__square{
+    width: 150px;
+    height: 30px;
+    background: var(--lcd-color);
+    border-radius: 3px;
+    border-top: 3px solid var(--box-shadow);
+    border-left: 3px solid var(--box-shadow);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.calculator__square > div{
+    border-left: 1px solid var(--font-color);
+}
+.casio{
+    font-family: 'Goldman', cursive;
+    font-size: 20px;
+    color: var(--font-color);
+    padding: 10px 0px 20px;
+
+}
+
 .screen__history{
     height: 40px;
     width: 100%;
@@ -67,15 +100,31 @@ body{
     align-items: center;
 
 }
+
+.screen{
+    border:2px solid var(--box-shadow);
+    padding: 10px 10px 20px;
+    border-radius: 5px 5px 20px 20px;
+    box-shadow: 2px 3px var(--box-shadow) inset;
+}
+
 .screen_value{
     width: 100%;
     height: 50px;
-    font-size: 35px;
+    font-size: 40px;
     text-align: end;
     background: none;
     border: none;
     color: var(--font-color);
     outline-style: none;
+    font-family: 'LED Digital 7', sans-serif;
+    background: var(--lcd-color);
+    padding: 25px 10px;
+    color: black;
+    border-radius: 5px;
+    border-top: 3px solid var(--box-shadow);
+    border-left: 3px solid var(--box-shadow);
+
 }
 
 .calculator .keyboard{
@@ -99,7 +148,7 @@ body{
 .keyboard button{
     width: 50px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     color: var(--font-color);
     font-size: 20px;
@@ -107,8 +156,11 @@ body{
     box-shadow: 3px 3px var(--box-shadow);
     background: var(--body-color);
     background: linear-gradient(317deg, var(--bg-gradient) 0%, var(--body-color) 53%, var(--box-shadow) 100%);
+    user-select: none;
+    
 }
 .keyboard button:active{
     box-shadow: 0px 0px ;
 
 }
+

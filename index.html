@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./public/styles/styles.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
@@ -13,12 +13,14 @@
     
 </head>
 <body>
+    <i class="fas fa-lightbulb calculator__mode"></i>
     <main class="container">
+
         <section class="calculator" id="v1" hidden>
             <div>
                 <ul class="screen">
                     <div class="screen c-field">
-                        <input type="text" id="input__screen" >
+                        <input type="text" id="input__screen">
                     </div>
                 </ul>
                 <ul class="keyboard">
@@ -27,14 +29,19 @@
             </div>
         </section>
         <section class="calculator" id="v2">
-
+            
             <div class="calculator__v2">
-                <div class="calculator__mode">
-                    <i class="fas fa-lightbulb"></i>
+                <div class="calculator__brand">
+                    <h3 class="casio">CASIO</h3>
+                    <div class="calculator__square">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
                 <div class="calculator__screen">
                     <div class="screen">
-                        <div class="screen__history prev-value"></div>
                         <input class="screen_value" type="text" id="input__screen2" >
                     </div>
                 </div>
@@ -45,8 +52,8 @@
             </div>
         </section>
     </main>
-    <script src="../src/index.js" type="module"></script>
-    <script src="../src/main.js" type="module">
+    <script src="./src/index.js" type="module"></script>
+    <script src="./src/main.js" type="module">
     </script>
 </body>
 </html>
